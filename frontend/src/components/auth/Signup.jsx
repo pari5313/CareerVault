@@ -111,7 +111,7 @@ const Signup = () => {
                             value={input.fullname}
                             name="fullname"
                             onChange={changeEventHandler}
-                            placeholder="Patel"
+                            placeholder="Paridhi"
                         />
                         {errors.fullname && <p className="text-red-500 text-sm">{errors.fullname}</p>}
                     </div>
@@ -122,7 +122,7 @@ const Signup = () => {
                             value={input.email}
                             name="email"
                             onChange={changeEventHandler}
-                            placeholder="patel@gmail.com"
+                            placeholder="paridhi@gmail.com"
                         />
                         {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
                     </div>
