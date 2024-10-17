@@ -10,8 +10,24 @@ const category = [
     "Backend Developer",
     "Data Science",
     "Graphic Designer",
-    "FullStack Developer"
-]
+    "FullStack Developer",
+    "Mobile App Developer",
+    "UI/UX Designer",
+    "DevOps Engineer",
+    "Software Engineer",
+    "Machine Learning Engineer",
+    "Cybersecurity Analyst",
+    "Content Writer",
+    "Digital Marketer",
+    "Project Manager",
+    "Systems Analyst",
+    "Database Administrator",
+    "Web Designer",
+    "Cloud Engineer",
+    "SEO Specialist",
+    "QA Tester"
+];
+
 
 const CategoryCarousel = () => {
     const dispatch = useDispatch();
@@ -27,8 +43,10 @@ const CategoryCarousel = () => {
                 <CarouselContent>
                     {
                         category.map((cat, index) => (
-                            <CarouselItem className="md:basis-1/2 lg-basis-1/3">
-                                <Button onClick={()=>searchJobHandler(cat)} variant="outline" className="rounded-full">{cat}</Button>
+                            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 mx-2.5">
+                                <Button onClick={() => searchJobHandler(cat)} variant="outline" className="rounded-full">
+                                    {cat}
+                                </Button>
                             </CarouselItem>
                         ))
                     }
@@ -37,7 +55,8 @@ const CategoryCarousel = () => {
                 <CarouselNext />
             </Carousel>
         </div>
-    )
+    );
+    
 }
 
 export default CategoryCarousel
